@@ -1,3 +1,5 @@
+// réduire boule size, nombre au format téléphone
+
 const home = document.getElementById("galaxy");
 const scene = new THREE.Scene();
 
@@ -19,14 +21,22 @@ textures =[texture,textureb];
 //     return parseFloat(str);
 // }
 
-const pointsL = new Float32Array(500*3);
+let nbstars = 600;
+if (window.innerWidth <= 600 ){
+    nbstars /=4; 
+}
+
+
+// console.log(nbstars)
+
+const pointsL = new Float32Array(nbstars*3);
 for(let i=0; i<pointsL.length; i++){
     pointsL[i]=THREE.MathUtils.randFloatSpread(4);
 }
 
 
 const geometry = new THREE.BoxGeometry( 100, 100, 0 );
-const materialCache = new THREE.MeshBasicMaterial( { color: 0xf05122D } );
+const materialCache = new THREE.MeshBasicMaterial( { color: 0x000000 } );
 const cube = new THREE.Mesh( geometry, materialCache );
 cube.position.z -= 4;
 scene.add( cube );
@@ -53,7 +63,7 @@ scene.add(group);
 
 //--------------------------------------------------------------------------------------------------------
 
-const pointsL2 = new Float32Array(500*3);
+const pointsL2 = new Float32Array(nbstars*3);
 for(let i=0; i<pointsL2.length; i++){
     pointsL2[i]=THREE.MathUtils.randFloatSpread(4);
 }
@@ -99,12 +109,7 @@ window.addEventListener('resize', e=>{
 // const controls = new OrbitControls(camera, renderer.domElement);
 
 
-let mouseX= 0;
-let mouseY= 0;
-window.addEventListener('mousemove', e=>{
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-})
+
 // window.addEventListener('touchmove', e=>{
 //     mouseX = e.clientX;
 //     mouseY = e.clientY;
@@ -139,38 +144,78 @@ function createGroup(n, toClone){
 
 const allgroup = new THREE.Group();
 allgroup.add(group);
-scene.add(allgroup)
+scene.add(allgroup);
 
 const groupsList = createGroup(6, group);
 groupsList.unshift(group);
-console.log(groupsList)
+// console.log(groupsList)
 
-const dlight = new THREE.DirectionalLight(0x198CFF);
-dlight.position.set(0,0,1);
-scene.add(dlight)
+// const dlight = new THREE.DirectionalLight(0x198CFF);
+// dlight.position.set(0,0,1);
+// scene.add(dlight)
 
-const smoke = textureloader.load("../img/smoke.png");
-const cloudGeo = new THREE.PlaneBufferGeometry(500, 500);
-const matcloud = new THREE.MeshLambertMaterial({
-    map: smoke,
-    transparent: true,
-    alphaTest: 0.0001
+// const smoke = textureloader.load("../img/smoke.png");
+// const cloudGeo = new THREE.PlaneBufferGeometry(500, 500);
+// const matcloud = new THREE.MeshLambertMaterial({
+//     map: smoke,
+//     transparent: true,
+//     alphaTest: 0.0001
+// })
+
+// let allclouds = []
+
+// for(let i=0; i<3; i++){
+//     let cloud = new THREE.Mesh(cloudGeo, matcloud);
+//     cloud.position.set(Math.random()*800 -400,0, Math.random()*500-500);
+//     cloud.rotation.x = 1.16;
+//     cloud.rotation.y = -0.12;
+//     cloud.rotation.z = 2;
+//     cloud.material.opacity = 0.55;
+//     scene.add(cloud);
+//     allclouds.push(cloud);
+
+// }
+
+
+// const pivotG = new THREE.SphereGeometry(10,10,10);
+// const pivotM = new THREE.MeshBasicMaterial({color:0x000000});
+// const pivot = new THREE.Mesh(pivotG, pivotM)
+// pivot.add(allgroup);
+// scene.add(pivot);
+
+
+
+let canMove = Boolean;
+const firstsec=document.getElementById('first');
+const clientHeight = document.documentElement.clientHeight;
+
+
+// console.log(isInViewport(document.getElementById('first')));
+
+
+window.addEventListener('scroll', () => {
+    let firstsecY = firstsec.getBoundingClientRect().y;
+    let firstsecH = firstsec.getBoundingClientRect().height;
+    if (clientHeight/2.5 <= firstsecY + (firstsecH * 2) / 2){
+        canMove = true;
+    }else{
+        canMove = false;
+    }
+    // console.log(canMove)
+    // console.log(document.documentElement.scrollTop);
+});
+
+
+
+let mouseX= 0;
+let mouseY= 0;
+window.addEventListener('mousemove', e=>{
+    mouseX = e.clientX;
+    mouseY = e.clientY;
 })
 
-let allclouds = []
-
-for(let i=0; i<3; i++){
-    let cloud = new THREE.Mesh(cloudGeo, matcloud);
-    cloud.position.set(Math.random()*800 -400,0, Math.random()*500-500);
-    cloud.rotation.x = 1.16;
-    cloud.rotation.y = -0.12;
-    cloud.rotation.z = 2;
-    cloud.material.opacity = 0.55;
-    // scene.add(cloud);
-    allclouds.push(cloud);
-
-}
-
+let speedCam = 0.0005 //0.0005
+let speed = 2;
 let counter = 0;
 let which = 0;
 function tick(){
@@ -179,25 +224,39 @@ function tick(){
     requestAnimationFrame(tick);
     
 
-
-    const ratioX = (mouseX / window.innerWidth - 0.5)*2
-    const ratioY = (mouseY / window.innerHeight- 0.5*2)
-    allgroup.rotation.y = ratioX * Math.PI*0.02;
-    allgroup.rotation.x = ratioY * Math.PI*0.02;
+    if(canMove){
+        const ratioX = (mouseX / window.innerWidth - 0.5)*speed
+        const ratioY = (mouseY / window.innerHeight- 0.5*speed)
+        allgroup.rotation.y = ratioX * Math.PI*0.02;
+        allgroup.rotation.x = ratioY * Math.PI*0.02;
+    }
     
-    allclouds.forEach(e=>{
-        e.rotation.z-=0.0002;
-    })
-    camera.position.z -= 0.0005;
-    cube.position.z -= 0.0005;
+
+
+    // allclouds.forEach(e=>{
+    //     e.rotation.z-=0.0002;
+    // })
+    // if(which%2==0){
+    //     camera.position.z -= 0.0002;
+    // }else{
+    //     camera.position.z += 0.0002;
+    // }
+    //0.0005--6300
+
+    camera.position.z -= speedCam;
+    cube.position.z -= speedCam;
+    
+    // console.log("speed : "+speed)
     if(counter == 6300){
         counter = 0;
         groupsList[which].position.z=camera.position.z-8;
+        // allgroup.position.z=camera.position.z-1;
         which++;
         if(which>=groupsList.length) which=0; 
+        // console.log("speed : "+speed)
     }
     counter+=1;
-    console.log(which)
+    // console.log(which)
 }
 
 

@@ -8,11 +8,21 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <section class="first">
+    <nav class="none">
+        <ol>
+            <li id="nav1" class="navs"></li>
+            <li id="nav2" class="navs"></li>
+            <li id="nav3" class="navs"></li>
+            <li id="nav4" class="navs"></li>
+        </ol>
+    </nav>
+    <section class="first" id="first">
         <h1>Bienvenue sur mon portfolio</h1>
+        <img id="cheveron" class='cheveron' src="img/cheveron.png" alt="Cheveron indiquant un scroll">
         <div id="galaxy"></div>
     </section>
-    <section class="second">
+    <section class="second" id="second">
+        <div class="fade"></div>
     </section>
     <section class="third">
     </section>
@@ -21,5 +31,6 @@
 
     <script src="./libs/three.min.js"></script>
     <script src="./scripts/galaxy.js"></script>
+    <script src="./scripts/scroll.js"></script>
 </body>
 </html>
