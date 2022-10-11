@@ -9,15 +9,18 @@
     box-sizing: border-box;
     font-size: 20px;
     font-family: sans-serif;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 ::-webkit-scrollbar{
     display: none;
 }
 
-section{
+
+/* section{
     border: solid 2px red;
-}
+} */
 
 body{
     width: 100%;
@@ -118,6 +121,10 @@ ol li:hover{
     cursor: pointer;
     fill: white;
     animation: slide 1s infinite ease-in-out;
+}
+
+#second{
+
 }
 
 

@@ -7,8 +7,8 @@ const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(75, home.clientHeight / home.clientHeight, 0.01, 1000 );
 camera.position.z = 1.5;
-camera.position.y = 0;
-camera.position.x = 0;
+// camera.position.y = 0;
+// camera.position.x = 0;
 scene.add(camera);
 
 
@@ -236,27 +236,31 @@ function tick(){
     // allclouds.forEach(e=>{
     //     e.rotation.z-=0.0002;
     // })
-    // if(which%2==0){
-    //     camera.position.z -= 0.0002;
-    // }else{
-    //     camera.position.z += 0.0002;
-    // }
+    if(which%2==0){
+        camera.position.z -= speedCam;
+        cube.position.z -= speedCam
+    }else{
+        camera.position.z += speedCam
+        cube.position.z -= speedCam
+    }
     //0.0005--6300
 
-    camera.position.z -= speedCam;
-    cube.position.z -= speedCam;
+    // camera.position.z -= speedCam;
+    // allgroup.position.x = camera.position.x;
+    // allgroup.position.y = camera.position.y;
+    // cube.position.z -= speedCam;
     
     // console.log("speed : "+speed)
-    if(counter == 6300){
+    if(counter == 4000){// 6300
         counter = 0;
-        groupsList[which].position.z=camera.position.z-8;
+        // groupsList[which].position.z=camera.position.z-8;
         // allgroup.position.z=camera.position.z-1;
         which++;
-        if(which>=groupsList.length) which=0; 
+        // if(which>=groupsList.length) which=0; 
         // console.log("speed : "+speed)
     }
     counter+=1;
-    // console.log(which)
+    // console.log(counter)
 }
 
 
