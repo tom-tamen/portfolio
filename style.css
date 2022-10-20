@@ -1,6 +1,5 @@
 :root{
     --backcolor:#05122D;
-    /* --backcolor:black; */
 }
 
 *{
@@ -18,9 +17,9 @@
 }
 
 
-/* section{
+section{
     border: solid 2px red;
-} */
+}
 
 body{
     width: 100%;
@@ -34,7 +33,7 @@ body{
 }
 
 
-.first, .second, .third, .fourth{
+.first, .second, .third, .fourth, .fifth{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -71,23 +70,47 @@ ol{
     height: 25vh;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items:flex-end;
     list-style: none;
 }
 
 ol li{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+ol li span{
+    font-size: 12px;
+    position: absolute;
+    right: 15px;
+}
+
+
+.dot{
     width: 10px;
     height: 10px;
     border-radius: 100%;
     background-color: white;
-    cursor: pointer;
+    position: fixed;
 }
 
-ol li:hover{
+ol li span{
+    opacity: 0;
+}
+
+ol li:hover .dot{
     transform: scale(180%);
 }
 
-.onpage{
+ol li:hover span, ol li span:hover {
+    opacity: 100%;
+}
+
+
+li.onpage .dot{
     transform: scale(180%);
     background-color: rgb(248, 72, 148);
 }
@@ -107,7 +130,6 @@ ol li:hover{
     position: absolute;
     width: 100%;
     height: 200px;
-    /* background-image: linear-gradient(0deg, var(--backcolor), transparent); */
     background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, var(--backcolor) 100%);
     top: 0;
     z-index:1;
@@ -121,10 +143,6 @@ ol li:hover{
     cursor: pointer;
     fill: white;
     animation: slide 1s infinite ease-in-out;
-}
-
-#second{
-
 }
 
 
