@@ -1,0 +1,21 @@
+@mixin flexdef($gap:null) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @if $gap!=null{
+        gap: $gap;
+    }
+}
+
+@mixin vertical-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin breakpoint($point) {
+    @media only screen and (max-width: $point) {
+        @content;
+    }
+}

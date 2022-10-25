@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/main.css">
     <title>Portfolio</title>
 </head>
 <body>
@@ -17,19 +17,29 @@
             <li id="nav5" class="navs"><span>Contact</span><div class="dot"></div></li>
         </ol>
     </nav>
-    <section class="first" id="first">
-        <h1>Bienvenue sur mon portfolio</h1>
+    <section class="portfolio-section" id="first">
+        <h1>Tom Tamen<br><span>Développeur Web</span></h1>
         <img id="cheveron" class='cheveron' src="img/cheveron.png" alt="Cheveron indiquant un scroll">
         <div id="galaxy"></div>
     </section>
-    <section class="second" id="second">
-        <div class="fade"></div>
+    <section class="portfolio-section" id="second">
+        <div id="fade">
+            <div id="fade-top"></div>
+            <div id="fade-bot"></div>
+        </div>
+        <div class="second-textzone">
+            <div class="center">
+                <p>Salut <span class="shake">👋</span>, moi c'est</p>
+                <h2>Tom Tamen</h2>
+            </div>
+            <p class="presentaion">Je suis un jeune développeur <span>passionné</span>. J'ai découvert la programmation en 2018 et je vis depuis une véritable histoire d'amour 💖. En ce moment, je découvre et expérimente l'univers <span>génial</span> du développement web. Actuellement étudiant, j'aspire à devenir développeur back-end. Je mène mes projets à bien grâce à ma <span>motivation</span> et mon sens du <span>sérieux</span>.</p>
+        </div>
     </section>
-    <section class="third">
+    <section class="portfolio-section" id="third">
     </section>
-    <section class="fourth">
+    <section class="portfolio-section" id="fourth">
     </section>
-    <section class="fifth">
+    <section class="portfolio-section" id="fifth">
     </section>
 
     <script src="./libs/three.min.js"></script>
