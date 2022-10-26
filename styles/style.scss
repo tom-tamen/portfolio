@@ -29,9 +29,9 @@ $blue: #4aadff;
 }
 
 
-section{
-    border: solid 2px red;
-}
+// section{
+//     border: solid 2px red;
+// }
 
 body{
     width: 100%;
@@ -228,7 +228,7 @@ li.onpage .dot{
             @include mixins.breakpoint(800px){
                 font-size: 20px;
             }
-}
+        }
         h2:hover{
             opacity: 100%;
             letter-spacing:0;
@@ -237,6 +237,17 @@ li.onpage .dot{
             0 0 40px $pink,
             0 0 80px $pink,
             0 0 120px $pink;
+        }
+        @media(hover:none){
+            h2:hover{
+                opacity: 100%;
+                letter-spacing:0;
+                text-shadow: 0 0 10px $pink,
+                0 0 20px $pink,
+                0 0 40px $pink,
+                0 0 80px $pink,
+                0 0 120px $pink;
+            }
         }
     }
 }
@@ -280,7 +291,7 @@ li.onpage .dot{
             transition: 0.5s;
             img{
                 transition: 0.3s ease-in-out;
-                scale: 120%;
+                transform: scale(120%);
             }
             // border: solid 4px $pink;
             box-shadow: 0 0 10px $blue,
