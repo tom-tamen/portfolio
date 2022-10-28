@@ -10,6 +10,10 @@ function positionCalculation(){
 positionCalculation()
 
 
+window.addEventListener("load", ()=>{
+	scroll(1,0)
+	scroll(-1,0)
+});
 
 let current = 0;
 let oldCurrent =0;
@@ -25,8 +29,12 @@ window.addEventListener('scroll', ()=>{
 		oldCurrent=current;
 	}
 	if(current == 0){
-		document.querySelector('nav').classList.add('none')
-	}else document.querySelector('nav').classList.remove('none') 
+		document.querySelector('nav').classList.add('none');
+	}else document.querySelector('nav').classList.remove('none');
+
+	if(isInViewport(document.getElementById('heart'))){
+		document.getElementById('heart').classList.add('animheart');
+	} 
 })
 
 cheveron.addEventListener("click", ()=>{ScrollS(1)})
@@ -46,6 +54,7 @@ function ScrollS(index){
 		behavior: "smooth"
 	})
 }
+
 
 
 function isInViewport(section){
