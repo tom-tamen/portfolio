@@ -2,6 +2,9 @@ const cheveron = document.getElementById('cheveron');
 const sections = [...document.querySelectorAll("section")];
 const nav = [...document.querySelectorAll(".navs")];
 
+const presunderline = document.querySelectorAll('.presunderline');
+
+
 let sectionsPosition;
 
 function positionCalculation(){
@@ -11,6 +14,8 @@ positionCalculation()
 
 
 window.addEventListener("load", ()=>{
+	document.querySelector('body').classList.remove('noscroll');
+	document.getElementById('loader').style.display='none';
 	scroll(1,0)
 	scroll(-1,0)
 });
@@ -34,7 +39,13 @@ window.addEventListener('scroll', ()=>{
 
 	if(isInViewport(document.getElementById('heart'))){
 		document.getElementById('heart').classList.add('animheart');
-	} 
+	}
+	presunderline.forEach(e => {
+		if(isInViewport(e)){
+			e.classList.add('presunderline-anim');
+		}
+	});
+	
 })
 
 cheveron.addEventListener("click", ()=>{ScrollS(1)})
