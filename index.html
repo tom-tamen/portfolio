@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
     <meta name="keywords" content="tom tamen,développeur,developer,portfolio">
     <title>Tom Tamen | Portfolio développeur web</title>
     <meta name="description" content="Je suis Tom Tamen, un développeur web motivé et ceci est mon portfolio. Vous y retrouverez certains projets de développement que j'ai réalisé.">
@@ -101,15 +103,15 @@
         <h3>Projets</h3>
         <div class="grid-projects">
             <div class="card-project pj1">
-                <img src="https://picsum.photos/id/1020/600/400" alt="">
+                <img src="./img/projets/pw/pw-1.png" alt="">
                 <p>Portal World</p>
             </div>
             <div class="card-project pj2">
-                <img src="https://picsum.photos/id/1025/600/400" alt="">
+                <img src="./img/projets/maf/main.png" alt="">
                 <p>Musée des Arts Forains</p>
             </div>
             <div class="card-project pj3">
-                <img src="https://picsum.photos/id/1013/600/400" alt="">
+                <img src="./img/projets/pres/pres.png" alt="">
                 <p>Présentation</p>
             </div>
         </div>
@@ -119,14 +121,105 @@
         </div>
         <div class="detail">
             <div class="card-detail">
+                <div class="part title-project">
+                    <h4>Portal World</h4>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="./img/projets/pw/pw-1.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="./img/projets/pw/pw-2.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="./img/projets/pw/pw-3.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="./img/projets/pw/pw-4.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="./img/projets/pw/pw-5.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="./img/projets/pw/pw-7.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="./img/projets/pw/pw-6.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="part description-project">
+                    <p>Portal World est mon projet d'étude de fin de première année. Le site a été conçu from scratch sans librairie/framework avec du php / javascript /  html / css / MySQL. Le site se veut fonctionnel (sauf la partie achat qui est fictive). L'objectif du site était de mettre en avant les compétences acquises lors de la première année d'étude.</p>
+                    <p>Pour voir le site du projet : <a href="#">C'est ici</a><br> Pour voir le repo sur github : <a href="#">Par là</a></p>
+                </div>
             </div>
         </div>
         <div class="detail">
-            <div class="card-detail"></div>
+            <div class="card-detail">
+                <div class="part title-project">
+                    <h4>Musée des Arts Forains</h4>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="./img/projets/maf/main.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="./img/projets/maf/2.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="part description-project">
+                    <p>Ce projet a pour objectif de découvrir et utiliser le préprocesseur SASS avec la syntaxe SCSS.</p>
+                    <p>Pour voir le site du projet : <a href="https://bykrewz.github.io/RenduSCSS/index.html">C'est ici</a><br> Pour voir le repo sur github : <a href="https://github.com/ByKrewz/RenduSCSS">Par là</a></p>
+                </div>
+            </div>
         </div>
         <div class="detail">
-            <div class="card-detail"></div>
+            <div class="card-detail">
+                <div class="part title-project">
+                    <h4>Présentation</h4>
+                </div>
+                <div class="part single-img-project">
+                    <input type="checkbox" id="Zoom" class="zoom">
+                    <label for="Zoom">
+                        <img src="./img/projets/pres/pres.png" alt="Image du site web du projet">
+                    </label>
+                </div>
+                <div class="part description-project">
+                    <p>Pour ce projet, j'ai réalisé une page unique. L'objectif était de nous faire pratiquer l'environnement de travail Git/GitHub à plusieurs. Nous devions réaliser une page de présentation d'un membre de notre groupe autre que nous-même. Chaque page contient la présentation de la personne, sa passion et un de ses projets.</p>
+                    <p>Pour voir le site du projet : <a href="https://bykrewz.github.io/site_groupe/tom/lucie.html">C'est ici</a><br> Pour voir le repo sur github : <a href="https://github.com/ByKrewz/site_groupe">Par là</a></p>
+                </div>
+            </div>
         </div>
+        <p id="last-text">D'autres projets arrivent bientôt <span></span> <span></span> <span></span><br>Peut-être le vôtre.</p>
     </section>
     <section class="portfolio-section" id="fifth">
         <h3>Me contacter</h3>
@@ -136,6 +229,43 @@
     <script src="./scripts/galaxy.js"></script>
     <script src="./scripts/scroll.js"></script>
     <script src="./scripts/projects.js"></script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
+        const swiper = new Swiper('.swiper', {
+            grabCursor: true,
+            loop: true,
+            effect: "creative",
+            creativeEffect: {
+                prev: {
+                    translate: [0, 0, -400],
+                },
+                next: {
+                    translate: ["100%", 0, 0],
+                },
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            zoom: {
+                maxRatio: 3,
+                minRatio: 1
+            },
+            on: {
+                doubleClick: function () {
+                    if(this.zoom.enabled){
+                        this.zoomOut;
+                    }else{
+                        this.zoomIn;
+                    }
+                }
+            },
+        });
+    </script>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org/",

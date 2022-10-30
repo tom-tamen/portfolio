@@ -131,9 +131,9 @@ body{
     position: relative;
 }
 
-h2,p,h3{color: var(--text-color)}
+h2,p,h3,h4{color: var(--text-color)}
 
-h3{
+h3, h4{
     font-family: 'font3';
     font-weight: lighter;
     text-transform: uppercase;
@@ -206,7 +206,7 @@ ol li span{
 }
 
 ol li:hover .dot{
-    transform: scale(180%);
+    transform: scale(1.8);
 }
 
 ol li:hover span, ol li span:hover {
@@ -215,7 +215,7 @@ ol li:hover span, ol li span:hover {
 
 
 li.onpage .dot{
-    transform: scale(180%);
+    transform: scale(1.8);
     background-color: $pink;
 }
 
@@ -452,7 +452,7 @@ li.onpage .dot{
             transition: 0.5s;
             img{
                 transition: 0.3s ease-in-out;
-                transform: scale(120%);
+                transform: scale(1.2);
             }
             // border: solid 4px $pink;
             box-shadow: 0 0 10px $blue,
@@ -507,6 +507,7 @@ li.onpage .dot{
             img{
                 width: 100%;
                 height: auto;
+                transition: transform 0.3s;
             }
             p{
                 @include mixins.breakpoint(800px){
@@ -520,7 +521,7 @@ li.onpage .dot{
         }
         .card-project:hover{
             img{
-                transform: scale(110%);
+                transform: scale(1.1);
             }
         }
     }
@@ -537,9 +538,100 @@ li.onpage .dot{
         .card-detail{
             position: absolute;
             @include mixins.mid-center;
-            background-color: var(--backcolor);
+            // background-color: red;
             width: 80%;
             height: 80vh;
+            @include mixins.flexdef;
+            justify-content: space-between;
+            @include mixins.breakpoint(600px){
+                width: 90%;
+                height: 90vh;
+            }
+            .part{
+                @include mixins.flexdef;
+                width: 100%;
+            }
+            .zoom{
+                display: none;
+            }
+            .single-img-project{
+                height: 50%;
+                label{
+                    @include mixins.flexdef;
+                    width: 100%;
+                    height: 100%;
+                }
+                label img{
+                    transition: transform 0.25s;
+                    width: auto;
+                    height: 100%;
+                    cursor:zoom-in;
+                    @include mixins.breakpoint(700px){
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                .zoom:checked ~ label > img {
+                    transform: scale(2);
+                    cursor: zoom-out;
+                    @include mixins.breakpoint(1400px){
+                        transform: scale(1.5);
+                    }
+                    @include mixins.breakpoint(1050px){
+                        transform: scale(1);
+                    }
+                }
+            }
+            .swiper{
+                width: 100%;
+                height: auto;
+                .swiper-slide{
+                    @include mixins.flexdef;
+                }
+                .swiper-button-prev, .swiper-button-next{
+                    color : $pink; 
+                }
+                .swiper-pagination-bullet-active{
+                    background-color: $pink;
+                }
+            }
+            .title-project{
+                height: 20%;
+            }
+            .morepics{
+                height: 30%;
+                width: 100%;
+                height: fit-content;
+                @include mixins.flexdef(3%);
+                flex-direction: row;
+                img{
+                    width: 30%;
+                    height: auto;
+                }
+                @include mixins.breakpoint(600px){
+                    flex-direction: row;
+                }
+            }
+            .description-project{
+                height: 40%;
+                padding: 20px;
+                gap: 10px;
+                text-align: justify;
+                a{
+                    text-decoration: none;
+                    color: $pink;
+                }
+                @include mixins.breakpoint(600px){
+                    p,a{
+                        font-size: 15px;
+                    }
+                }
+                @include mixins.breakpoint(400px){
+                    p,a{
+                        font-size: 12px;
+                    }
+                }
+            }
         }
     }
     .exit{
@@ -551,6 +643,10 @@ li.onpage .dot{
         display: none;
         width: 30px;
         height: 30px;
+        @include mixins.breakpoint(600px){
+            top:20px;
+            right:20px;
+        }
         .bar{
             position: absolute;
             top: 50%;
@@ -573,8 +669,38 @@ li.onpage .dot{
             background-color: red;
         }
     }
+    #last-text{
+        text-align: center;
+        span{
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background-color: white;
+            border-radius: 100%;
+            @include mixins.breakpoint(500px){
+                width: 3px;
+                height: 3px;
+            }
+        }
+        span:nth-child(1){
+            animation: dots1 1.5s infinite;
+        }
+        span:nth-child(2){
+            animation: dots2 1.5s infinite;
+        }
+        span:nth-child(3){
+            animation: dots3 1.5s infinite;
+        }
+    }
+    @include mixins.breakpoint(800px){
+        gap: 20px;
+    }
     @include mixins.breakpoint(500px){
-        gap: 50px
+        gap: 0;
+        #last-text{
+            font-size: 14px;
+            text-align: center;
+        }
     }
 }
 
@@ -639,3 +765,49 @@ li.onpage .dot{
     100%{height: 50px; opacity: 0%;}
 }
 
+@keyframes dots1{
+    0%{
+        transform: scale(1);
+        background-color: white;
+    }
+    16%{
+        transform: scale(1.8);
+        background-color: $pink;
+    }
+    33%{
+        transform: scale(1);
+        background-color: white;
+    }
+    100%{
+        transform: scale(1);
+        background-color: white;
+    }
+}
+@keyframes dots2{
+    33%{
+        transform: scale(1);
+        background-color: white;
+    }49%{
+        transform: scale(1.8);
+        background-color: $pink;
+    }66%{
+        transform: scale(1);
+        background-color: white;
+    }
+    100%{
+        transform: scale(1);
+        background-color: white;
+    }
+}
+@keyframes dots3{
+    66%{
+        transform: scale(1);
+        background-color: white;
+    }82%{
+        transform: scale(1.8);
+        background-color: $pink;
+    }100%{
+        transform: scale(1);
+        background-color: white;
+    }
+}
