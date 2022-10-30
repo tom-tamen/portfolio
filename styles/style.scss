@@ -433,7 +433,7 @@ li.onpage .dot{
         .comp-card{
             @include mixins.flexdef(20px);
             border: solid 1px white;
-            border-radius: 10px;
+            border-radius: 20px;
             img{
                 width: 100px;
                 height: auto;
@@ -481,6 +481,100 @@ li.onpage .dot{
             font-size: 15px;
             text-align: center;
         }
+    }
+}
+
+#fourth{
+    gap: 100px;
+    .grid-projects{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 40vh;
+        grid-gap: 50px;
+        @include mixins.breakpoint(800px){
+            width: 30%;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 20vh);
+        }
+        @include mixins.breakpoint(550px){
+            width: 50%;
+        }
+        .card-project{
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            p{
+                @include mixins.breakpoint(800px){
+                    font-size: 15px;
+                }
+            }
+            @include mixins.flexdef(50px);
+            @include mixins.breakpoint(800px){
+                gap: 10px;
+            }
+        }
+        .card-project:hover{
+            img{
+                transform: scale(110%);
+            }
+        }
+    }
+    .detail{
+        display: none;
+        z-index: 20;
+        position: relative;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--backcolor);
+        top: 0;
+        left: 0;
+        .card-detail{
+            position: absolute;
+            @include mixins.mid-center;
+            background-color: var(--backcolor);
+            width: 80%;
+            height: 80vh;
+        }
+    }
+    .exit{
+        z-index: 21;
+        position: fixed;
+        top:50px;
+        right: 50px;
+        cursor: pointer;
+        display: none;
+        width: 30px;
+        height: 30px;
+        .bar{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 4px;
+            border-radius: 4px;
+            background-color: white;
+        }
+        .bar:nth-child(1){
+            transform: rotate(45deg);
+        }
+        .bar:nth-child(2){
+            transform: rotate(-45deg);
+        }
+    }
+    .exit:hover{
+        .bar{
+            transition:background-color .4s;
+            background-color: red;
+        }
+    }
+    @include mixins.breakpoint(500px){
+        gap: 50px
     }
 }
 
