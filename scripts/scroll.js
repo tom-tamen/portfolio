@@ -5,6 +5,7 @@ const nav = [...document.querySelectorAll(".navs")];
 const presunderline = document.querySelectorAll('.presunderline');
 
 
+
 let sectionsPosition;
 
 function positionCalculation(){
@@ -16,6 +17,11 @@ positionCalculation()
 window.addEventListener("load", ()=>{
 	document.querySelector('body').classList.remove('noscroll');
 	document.getElementById('loader').style.display='none';
+
+	document.querySelector('.logo-top').classList.add('logo-a');
+	document.querySelector('.logo-bot').classList.add('logo-a');
+	document.querySelector('.full-logo').classList.add('logo-b');
+
 	scroll(1,0)
 	scroll(-1,0)
 });
