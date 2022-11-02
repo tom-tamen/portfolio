@@ -931,6 +931,26 @@ h3{
     }
 }
 
+.switch-lang{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 30;
+    width: fit-content;
+    height: fit-content;
+    img{
+        width: 25px;
+        height: auto;
+        @include mixins.breakpoint(600px){
+            width: 20px;
+        }
+    }
+    @include mixins.breakpoint(600px){
+        top: 10px;
+        right: 10px;
+    }
+}
+
 
 @keyframes slide{
     from{transform: translateY(0);}
