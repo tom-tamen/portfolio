@@ -117,8 +117,8 @@
                 <p>Portal World</p>
             </div>
             <div class="card-project pj2">
-                <img src="./img/projets/maf/main.png" alt="Image du site web du projet">
-                <p>Musée des Arts Forains</p>
+                <img src="./img/projets/hoozpend/gestion.png" alt="Image du site web du projet">
+                <p>Hoozpend</p>
             </div>
             <div class="card-project pj3">
                 <img src="./img/projets/pres/pres.png" alt="Image du site web du projet">
@@ -179,25 +179,40 @@
                 </div>
                 <div class="part description-project">
                     <p>Portal World est mon projet d'étude de fin de première année. Le site a été conçu from scratch sans librairie/framework avec du php / javascript /  html / css / MySQL. Le site se veut fonctionnel (sauf la partie achat qui est fictive). L'objectif du site était de mettre en avant les compétences acquises lors de la première année d'étude.</p>
-                    <p>Pour voir le site du projet : <a href="#">C'est ici</a><br> Pour voir le repo sur github : <a href="#">Par là</a></p>
+                    <p>Pour voir le site du projet : <a href="#">Bientôt</a></p>
                 </div>
             </div>
         </div>
         <div class="detail">
             <div class="card-detail">
                 <div class="part title-project">
-                    <h4>Musée des Arts Forains</h4>
+                    <h4>Hoozpend</h4>
                 </div>
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="swiper-zoom-container">
-                                <img src="./img/projets/maf/main.png" alt="Image du site web du projet">
+                                <img src="./img/projets/hoozpend/hoozpend.png" alt="Image du site web du projet">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="swiper-zoom-container">
-                                <img src="./img/projets/maf/2.png" alt="Image du site web du projet">
+                                <img src="./img/projets/hoozpend/gestion.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="./img/projets/hoozpend/delete.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="./img/projets/hoozpend/stats1.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="./img/projets/hoozpend/stats2.png" alt="Image du site web du projet">
                             </div>
                         </div>
                         
@@ -207,8 +222,7 @@
                     <div class="swiper-button-next"></div>
                 </div>
                 <div class="part description-project">
-                    <p>Ce projet a pour objectif de découvrir et utiliser le préprocesseur SASS avec la syntaxe SCSS.</p>
-                    <p>Pour voir le site du projet : <a href="https://tom-tamen.github.io/RenduSCSS/">C'est ici</a><br> Pour voir le repo sur github : <a href="https://github.com/tom-tamen/site_groupe">Par là</a></p>
+                    <p>Ce projet personnel avait pour but de me faire pratiquer du php et de répondre à un problème. Le problème étant la nécessité d'un outil pour analyser les dépenses quotidiennes. Le projet a été conçu from scratch sans framework en php/MySQL/JavaScript. Librairie utilisée : Chart.js </p>
                 </div>
             </div>
         </div>
@@ -233,30 +247,52 @@
     </section>
     <section class="portfolio-section" id="fifth">
         <h3>Me contacter</h3>
-        <form method="POST">
+        <form action='mail.php' method="POST">
             <div class="contact-content">
                 <div class="contact-left">
                     <div class="group-input">
-                        <input type="text" name="identity" placeholder="Nom / Prénom" required>
-                        <input type="email" name="email" placeholder="E-mail" required>                        
+                        <div class="required">
+                            <input type="text" name="identity" placeholder="Nom / Prénom" required>
+                            <span>*</span>
+                        </div>
+                        <div class="required">
+                            <input type="email" name="email" placeholder="E-mail" required>               
+                            <span>*</span>
+                        </div>
                     </div>
                     <div class="group-input">
-                        <input type="text" name="phone" placeholder="Téléphone" required>
-                        <input type="text" name="obj" placeholder="Objet" required>
+                        <div class="required">
+                            <input type="text" name="phone" placeholder="Téléphone">
+                        </div>
+                        <div class="required">
+                            <input type="text" name="obj" placeholder="Objet" required>
+                            <span>*</span>
+                        </div>
                     </div>
                 </div>
                 <div class="contact-right">
-                    <textarea name="msg" placeholder="Message" required></textarea>
+                    <div class="required-area">
+                        <textarea name="msg" placeholder="Message" required></textarea>
+                        <span>*</span>
+                    </div>
                 </div>
             </div>
+            <input type="hidden" name="lang" value="fr">
+            <input type="hidden" name='valid'>
             <input type="submit" value="Envoyer">
         </form>
-        <p class="return"></p>
+        <?php
+            if(isset($_GET['res']) && $_GET['res'] === 'err'){
+                echo "<p class='return red'>Un champ n'est pas correctement rempli.</p>";
+            }else if(isset($_GET['res']) && $_GET['res'] === 'ok'){
+                echo "<p class='return green'>Message envoyé avec succès.</p>";
+            }
+        ?>
         <footer>
             <div class="group-footer">
                 <img src="./img/contact/mail.png" alt="logo de mail">
                 <p>Email :</p>
-                <p id="mail">tomtamen.pro(@)gmail.com</p>
+                <p id="mail">contact@tom-tamen.fr</p>
             </div>
             <div class="group-footer">
                 <img src="./img/contact/linekdin.png" alt="logo de linekdin">
@@ -318,7 +354,7 @@
             "url": "https://tom-tamen.fr",
             "image": "",
             "sameAs": [
-            "https://github.com/ByKrewz",
+            "https://github.com/tom-tamen",
             "https://www.linkedin.com/in/tom-tamen/"
             ],
             "jobTitle": "Étudiant développeur web"  
@@ -326,3 +362,4 @@
     </script>
 </body>
 </html>
+

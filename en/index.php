@@ -118,8 +118,8 @@
                 <p>Portal World</p>
             </div>
             <div class="card-project pj2">
-                <img src="../img/projets/maf/main.png" alt="Image from the project website">
-                <p>Museum of Fairground Arts</p>
+                <img src="../img/projets/hoozpend/gestion.png" alt="Image from the project website">
+                <p>Hoozpend</p>
             </div>
             <div class="card-project pj3">
                 <img src="../img/projets/pres/pres.png" alt="Image from the project website">
@@ -180,25 +180,40 @@
                 </div>
                 <div class="part description-project">
                     <p>Portal World is my end of first year study project. The site was designed from scratch without library/framework with php / javascript / html / css / MySQL. The site is meant to be functional (except the purchase part which is fictitious). The objective of the site was to highlight the skills acquired during the first year of study.</p>
-                    <p>To see the project website : <a href="#">It is here</a><br> To see the repo on github : <a href="#">This way</a></p>
+                    <p>To see the project website : <a href="#">Soon</a></p>
                 </div>
             </div>
         </div>
         <div class="detail">
             <div class="card-detail">
                 <div class="part title-project">
-                    <h4>Museum of Fairground Arts</h4>
+                    <h4>Hoozpend</h4>
                 </div>
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="swiper-zoom-container">
-                                <img src="../img/projets/maf/main.png" alt="Image from the project website">
+                                <img src="../img/projets/hoozpend/hoozpend.png" alt="Image du site web du projet">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="swiper-zoom-container">
-                                <img src="../img/projets/maf/2.png" alt="Image from the project website">
+                                <img src="../img/projets/hoozpend/gestion.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/hoozpend/delete.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/hoozpend/stats1.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/hoozpend/stats2.png" alt="Image du site web du projet">
                             </div>
                         </div>
                         
@@ -208,15 +223,14 @@
                     <div class="swiper-button-next"></div>
                 </div>
                 <div class="part description-project">
-                    <p>The objective of this project is to discover and use the SASS preprocessor with the SCSS syntax.</p>
-                    <p>To see the project website : <a href="https://tom-tamen.github.io/RenduSCSS/">It is here</a><br> To see the repo on github : <a href="https://github.com/tom-tamen/site_groupe">This way</a></p>
+                    <p>The purpose of this personal project was to make me practice php and to answer a problem. The problem was the need for a tool to analyze the daily expenses. The project was designed from scratch without any framework in php/MySQL/JavaScript. Library used : Chart.js</p>
                 </div>
             </div>
         </div>
         <div class="detail">
             <div class="card-detail">
                 <div class="part title-project">
-                    <h4>Présentation</h4>
+                    <h4>Presentation</h4>
                 </div>
                 <div class="part single-img-project">
                     <input type="checkbox" id="Zoom" class="zoom">
@@ -234,30 +248,52 @@
     </section>
     <section class="portfolio-section" id="fifth">
         <h3>Contact me</h3>
-        <form method="POST">
+        <form action='../mail.php' method="POST">
             <div class="contact-content">
                 <div class="contact-left">
                     <div class="group-input">
-                        <input type="text" name="identity" placeholder="Name / First name" required>
-                        <input type="email" name="email" placeholder="E-mail" required>                        
+                        <div class="required">
+                            <input type="text" name="identity" placeholder="Name / First name" required>
+                            <span>*</span>
+                        </div>
+                        <div class="required">
+                            <input type="email" name="email" placeholder="E-mail" required>               
+                            <span>*</span>
+                        </div>
                     </div>
                     <div class="group-input">
-                        <input type="text" name="phone" placeholder="Phone" required>
-                        <input type="text" name="obj" placeholder="Object" required>
+                        <div class="required">
+                            <input type="text" name="phone" placeholder="Phone">
+                        </div>
+                        <div class="required">
+                            <input type="text" name="obj" placeholder="Object" required>
+                            <span>*</span>
+                        </div>
                     </div>
                 </div>
                 <div class="contact-right">
-                    <textarea name="msg" placeholder="Message" required></textarea>
+                    <div class="required-area">
+                        <textarea name="msg" placeholder="Message" required></textarea>
+                        <span>*</span>
+                    </div>
                 </div>
             </div>
+            <input type="hidden" name="lang" value="en">
+            <input type="hidden" name='valid'>
             <input type="submit" value="Send">
         </form>
-        <p class="return"></p>
+        <?php
+            if(isset($_GET['res']) && $_GET['res'] === 'err'){
+                echo "<p class='return red'>A field is not correctly filled in.</p>";
+            }else if(isset($_GET['res']) && $_GET['res'] === 'ok'){
+                echo "<p class='return green'>Message sent successfully.</p>";
+            }
+        ?>
         <footer>
             <div class="group-footer">
                 <img src="../img/contact/mail.png" alt="mail logo">
                 <p>Email :</p>
-                <p id="mail">tomtamen.pro(@)gmail.com</p>
+                <p id="mail">contact@tom-tamen.fr</p>
             </div>
             <div class="group-footer">
                 <img src="../img/contact/linekdin.png" alt="linekdin logo">
@@ -319,7 +355,7 @@
             "url": "https://tom-tamen.fr",
             "image": "",
             "sameAs": [
-            "https://github.com/ByKrewz",
+            "https://github.com/tom-tamen",
             "https://www.linkedin.com/in/tom-tamen/"
             ],
             "jobTitle": "Student web developer"  

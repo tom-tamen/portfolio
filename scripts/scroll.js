@@ -24,6 +24,10 @@ window.addEventListener("load", ()=>{
 
 	scroll(1,0)
 	scroll(-1,0)
+
+	if(window.location.toString().includes("?res=err") || window.location.toString().includes("?res=ok")){
+		ScrollS(4);
+	}
 });
 
 let current = 0;
@@ -51,7 +55,6 @@ window.addEventListener('scroll', ()=>{
 			e.classList.add('presunderline-anim');
 		}
 	});
-	
 })
 
 cheveron.addEventListener("click", ()=>{ScrollS(1)})
