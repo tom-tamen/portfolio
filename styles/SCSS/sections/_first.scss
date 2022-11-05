@@ -1,0 +1,111 @@
+//This is the first section
+@use '../mixins';
+@use '../variables';
+h1{//main title
+    font-family: 'font';
+    color: variables.$text-color;
+    font-size: 70px;
+    text-align: center;
+    font-weight: normal;
+    span{
+        font-family: 'font';
+        font-size: 40px;
+        @include mixins.flexdef;
+        @include mixins.breakpoint(800px){
+            font-size: 20px;
+        }
+    }
+    @include mixins.breakpoint(800px){
+        font-size: 40px;
+        padding: 5px;
+    }
+}
+
+#galaxy{//galaxy animation refers to galaxy.js
+    width: 100%;
+    height: 120%;
+    background-color: variables.$backcolor;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.cheveron{//scroll down button
+    width: 40px;
+    height: auto;
+    position: absolute;
+    bottom: 4em;
+    cursor: pointer;
+    fill: variables.$text-color;
+    animation: slide 1s infinite ease-in-out;
+}
+
+.logo{ 
+    //here is the logo and its animation.
+    //The logo is divided into 3 parts in the form of svg. The top part, 
+    //the bottom part and finally the complete part which gathers all in one svg.
+    //The top and bottom parts of the logo are displayed first to form the animation 
+    //and then disappear to make room for the full logo.
+    //I did it like this because if I left the two parts detached, 
+    //there would be an offset that would distort the logo.
+    width: 150px;
+    height: 150px;
+    position: relative;
+    .logo-top, .logo-bot{
+        position: absolute;
+        width:60%;
+        height: 100%;
+        fill: none;
+        stroke-width: 15px;
+        stroke-dasharray: 3450;
+        stroke-dashoffset: 3450;
+    }
+    .logo-top{
+        stroke: variables.$blue;
+        right: 0;
+    }
+    .logo-bot{
+        stroke: variables.$pink;
+        left: 0;
+    }
+    
+    .full-logo{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        fill: rgb(255, 255, 255);
+    }
+    .full-logo.logo-b{
+        animation: logo-b 2s ease-in-out forwards;
+    }
+
+    .logo-top.logo-a, .logo-bot.logo-a{
+        animation: logo-a 2s ease-in forwards;
+    }
+    @include mixins.breakpoint(800px){
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.switch-lang{ //button with the flags to change the language
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 30;
+    width: fit-content;
+    height: fit-content;
+    img{
+        width: 25px;
+        height: auto;
+        @include mixins.breakpoint(600px){
+            width: 20px;
+        }
+    }
+    @include mixins.breakpoint(600px){
+        top: 10px;
+        right: 10px;
+    }
+}

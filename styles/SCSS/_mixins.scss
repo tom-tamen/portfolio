@@ -1,4 +1,4 @@
-@mixin flexdef($gap:null) {
+@mixin flexdef($gap:null) { //mixin for display flex
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,29 +8,29 @@
     }
 }
 
-@mixin vertical-center {
+@mixin vertical-center {//mixin to center an element vertically with a transform
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
-@mixin mid-center {
+@mixin mid-center { //mixin to center an element in the middle with a transform
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-@mixin breakpoint($point) {
+@mixin breakpoint($point) {// mixin for responsive (one of the most useful <3)
     @media only screen and (max-width: $point) {
         @content;
     }
 }
 
 
-@mixin element($color,$s) {
+@mixin element($color,$s) { //mixin for elements section 2
     text-shadow: 0 0 10px $color,
     0 0 20px $color,
     0 0 30px $color,
     0 0 40px $color;
-    animation: bgmove $s ease-in-out infinite;
+    animation: slide $s ease-in-out infinite;
 }

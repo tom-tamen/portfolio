@@ -1,0 +1,15 @@
+//Here we import all our scss files to compile them
+@use './variables';
+@use './global';
+@use './mixins';
+@use './loader';
+
+@use './sections/first';
+@use './nav';
+
+@use './sections/second';
+@use './sections/third';
+@use './sections/fourth';
+@use './sections/fifth';
+
+@use './keyframes';

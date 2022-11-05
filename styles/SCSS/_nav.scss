@@ -1,0 +1,48 @@
+//this is the vertical nav on the right
+@use './variables';
+nav{
+    position: fixed;
+    top: 50%;
+    right: 1%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    ol{//all sections
+        display: flex;
+        width: 50px;
+        height: 25vh;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:flex-end;
+        list-style: none;
+        li{//contains the section name and the dot
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            color: variables.$text-color;
+            position: relative;
+            span{//correspond to the section names
+                font-size: 12px;
+                position: absolute;
+                right: 15px;
+                opacity: 0;
+            }
+            .dot{
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                background-color: variables.$text-color;
+                position: fixed;
+            }
+        }
+        li:hover .dot{//Scaling hovered dot
+            transform: scale(1.8);
+        }
+        li:hover span, li span:hover { //display section name on hover
+            opacity: 100%;
+        }
+        li.onpage .dot{ //Color and scale the point corresponding to the section currently consulted
+            transform: scale(1.8);
+            background-color: variables.$pink;
+        }
+    }
+}

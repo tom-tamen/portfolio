@@ -283,6 +283,7 @@
             <input type="submit" value="Send">
         </form>
         <?php
+            //displays the result of an attempt to send the form
             if(isset($_GET['res']) && $_GET['res'] === 'err'){
                 echo "<p class='return red'>A field is not correctly filled in.</p>";
             }else if(isset($_GET['res']) && $_GET['res'] === 'ok'){
@@ -347,6 +348,7 @@
             },
         });
     </script>
+    <!-- rich snippet -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org/",
@@ -360,6 +362,23 @@
             ],
             "jobTitle": "Student web developer"  
         }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-40TKV1K23R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-40TKV1K23R');
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-246925138-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-246925138-1');
     </script>
 </body>
 </html>
