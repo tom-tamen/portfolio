@@ -1,0 +1,135 @@
+//Here are all the keyframes
+
+@use './variables';
+
+@keyframes slide{ //refers to section 1, 2, mixins
+    from{transform: translateY(0);}
+    50%{transform: translateY(10px);}
+    to{transform: translateY(0);}
+}
+
+@keyframes shake{ //refers to section 2
+    from{transform: rotate(10deg);}
+    50%{transform: rotate(-10deg);}
+    to{transform: rotate(10deg);}
+}
+
+@keyframes heart { //refers to section 2
+    from{
+        filter: none;
+    }
+    90%{
+        stroke-dashoffset:100%;
+    }
+    to{
+        stroke-dashoffset:100%;
+        filter: drop-shadow(0px 0px 3px variables.$pink-red)
+        drop-shadow(0px 0px 6px variables.$pink-red)
+        drop-shadow(0px 0px 15px variables.$pink-red)
+        drop-shadow(0px 0px 40px variables.$pink-red); 
+    }
+}
+
+
+@keyframes underlineanim{ //refers to section 2
+    100%{width: 100%;}
+}
+
+@keyframes loader{ //refers to loader
+    
+    45%{transform: rotate(0deg); opacity: 100%}
+    85%{opacity: 5%;}
+    90%{transform: rotate(90deg);}
+    95%{opacity: 0%;}
+    100%{transform: rotate(90deg);opacity: 0%;}
+}
+@keyframes loadbarH { //refers to the horizontal edges of the loader
+    20%{width: 50px;} 
+    45%{opacity: 100%}
+    95%{opacity: 0%;}
+    100%{width: 50px;opacity: 0%;}
+}
+@keyframes loadbarV { //refers to the vertical edges of the loader
+    0%{height: 0;}
+    20%{height: 0;}
+    40%{height: 50px;}
+    45%{opacity: 100%}
+    95%{opacity: 0%;}
+    100%{height: 50px; opacity: 0%;}
+}
+
+@keyframes dots1{ //refers to section 4 
+    0%{
+        transform: scale(1);
+        background-color: white;
+    }
+    16%{
+        transform: scale(1.8);
+        background-color: variables.$pink;
+    }
+    33%{
+        transform: scale(1);
+        background-color: white;
+    }
+    100%{
+        transform: scale(1);
+        background-color: white;
+    }
+}
+@keyframes dots2{ //refers to section 4 
+    33%{
+        transform: scale(1);
+        background-color: white;
+    }49%{
+        transform: scale(1.8);
+        background-color: variables.$pink;
+    }66%{
+        transform: scale(1);
+        background-color: white;
+    }
+    100%{
+        transform: scale(1);
+        background-color: white;
+    }
+}
+@keyframes dots3{ //refers to section 4 
+    66%{
+        transform: scale(1);
+        background-color: white;
+    }82%{
+        transform: scale(1.8);
+        background-color: variables.$pink;
+    }100%{
+        transform: scale(1);
+        background-color: white;
+    }
+}
+
+@keyframes logo-a{ //refers to section 1 
+    0%{
+        opacity: 100%;
+    }
+    80%{
+        stroke-dashoffset: 0;
+        opacity: 100%;
+    }
+    98%{
+        stroke-dashoffset: 0;
+        opacity: 0;
+    }
+    100%{
+        stroke-dashoffset: 0;
+        opacity: 0;
+    }
+}
+@keyframes logo-b{ //refers to section 1 
+    0%{
+        opacity: 0;
+    }
+    78%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}

@@ -1,0 +1,210 @@
+//This is the fifth and final section
+@use '../mixins';
+@use '../variables';
+#fifth{
+    position: relative;
+    form{//contact form
+        width: 50%;
+        height: 40vh;
+        @include mixins.flexdef(50px);
+        .required, .required-area{
+            height: 5vh;
+            width: 80%;
+            position: relative;
+            span{//symbol of the required
+                position: absolute;
+                color: red;
+                top: -5px;
+                right: -5px;
+                @include mixins.breakpoint(530px){
+                    font-size: 12px;
+                    top: 0;
+                    right: 0;
+                }
+            }
+            @include mixins.breakpoint(700px){
+                width: 90%;
+                height: 4vh;
+            }
+        }
+        .required-area{
+            height: 100%;
+            width: 100%;
+        }
+        .contact-content{//contains all the fields of the form (except submit)
+            width: 100%;
+            height: 70%;
+            @include mixins.flexdef;
+            flex-direction: row;
+            .contact-left{//contain all the fields (except ubmit and textarea)
+                height: 100%;
+                width: 40%;
+                @include mixins.flexdef;
+                align-items: flex-start;
+                justify-content: space-between;
+                .group-input{//group the inputs two by two (except ubmit and textarea)
+                    width: 100%;
+                    height: 100%;
+                    @include mixins.flexdef;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    input{
+                        height: 100%;
+                        width: 100%;
+                        padding: 20px;
+                        cursor: pointer;
+                        border-radius: 15px;
+                        border: none;
+                        @include mixins.breakpoint(700px){
+                            padding: 10px;
+                            font-size: 10px;
+                        }
+                        @include mixins.breakpoint(530px){
+                            font-size: 10px;
+                        }
+                    }
+                    input:focus{ //display a border when the input is focused
+                        border: solid 3px variables.$pink;
+                        @include mixins.breakpoint(530px){
+                            border: solid 1px variables.$pink;
+                        }
+                    }
+                    @include mixins.breakpoint(700px){
+                        align-items: center;
+                        justify-content: center;
+                        gap:3vh;
+                    }
+                }
+                @include mixins.breakpoint(700px){
+                    flex-direction: row;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .contact-right{//contain the textarea
+                width: 60%;
+                height: 100%;
+                textarea{
+                    padding: 20px;
+                    height: 100%;
+                    width: 100%;
+                    resize: none;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    @include mixins.breakpoint(700px){
+                        font-size: 10px;
+                        padding: 10px;
+                    }
+                }
+                @include mixins.breakpoint(700px){
+                    width: 100%;
+                }
+            }
+            textarea:focus, input:focus{
+                outline: none;
+                border: solid 3px variables.$pink;
+                @include mixins.breakpoint(530px){
+                    border: solid 1px variables.$pink;
+                }
+            }
+            @include mixins.breakpoint(700px){
+                flex-direction: column;
+            }
+        }
+        @include mixins.breakpoint(1000px){
+            width: 70%;
+        }
+        @include mixins.breakpoint(700px){
+            height: 50vh;
+        }
+        input[type='submit']{//submit button
+            background-color: rgba($color: white, $alpha: 0.1);
+            border: solid variables.$pink 3px;
+            padding: 10px;
+            width: 20%;
+            border-radius: 50px;
+            color: variables.$pink;
+            cursor: pointer;
+            transition: box-shadow 0.3s;
+            @include mixins.breakpoint(700px){
+                width: 50%;
+                padding: 5px;
+                border: solid variables.$pink 2px;
+                font-size: 12px;
+            }
+        }
+        input[type='submit']:hover{//animation of the submit button on hover
+            color: white;
+            border: solid white 3px;
+            background-color: variables.$pink;
+            box-shadow: 0 0 10px variables.$pink,
+            0 0 20px variables.$pink,
+            0 0 40px variables.$pink;
+        }
+        ::placeholder{
+            color: variables.$pink;
+            @include mixins.breakpoint(500px){
+                text-align: center;
+            }
+        }
+    }
+    .return{
+        @include mixins.breakpoint(700px){
+            font-size: 12px;
+        }
+    }
+    footer{ //footer with my links
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 50px;
+        @include mixins.flexdef(25px);
+        flex-direction: row;
+        height: 20vh;
+        width: 100%;
+        .group-footer{
+            @include mixins.flexdef;
+            gap:5px;
+            flex-direction: row;
+            img{//link logo
+                width: 30px;
+                height: auto;
+                @include mixins.breakpoint(500px){
+                    width: 20px;
+                }
+            }
+            a{
+                text-decoration: none;
+                color: variables.$pink;
+                @include mixins.breakpoint(530px){
+                    font-size: 10px;
+                }
+            }
+            p{
+                @include mixins.breakpoint(530px){
+                    font-size: 10px;
+                }
+            }
+            @include mixins.breakpoint(840px){
+                flex-direction: column;
+                text-align: center;
+            }
+            #mail{
+                color: variables.$pink;
+            }
+        }
+        @include mixins.breakpoint(500px){
+            padding: 10px;
+        }
+    }
+}
+
+//classes for the results of the contact form
+.red{
+    color: red;
+}
+
+.green{
+    color: rgb(33, 220, 61);
+}
