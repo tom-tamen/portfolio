@@ -88,7 +88,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 home.appendChild(renderer.domElement);
 renderer.render(scene, camera);
 
-window.addEventListener('resize', e=>{
+window.addEventListener('resize', ()=>{
     renderer.setSize(home.clientWidth, home.clientHeight);
 });
 
@@ -118,7 +118,7 @@ const allgroup = new THREE.Group();
 allgroup.add(group);
 scene.add(allgroup);
 
-const groupsList = createGroup(4, group); //create more groups
+createGroup(4, group); //create more groups
 
 
 //--------------------------------------------------------------------------------------------------------
