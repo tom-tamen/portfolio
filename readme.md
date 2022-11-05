@@ -29,7 +29,7 @@ To install and launch the project, follow the instructions below :
 
 <hr>
 
-I set up one app on the repo via <a href="https://github.com/marketplace"> Github marketplace </a>. It's <a href="https://github.com/marketplace/codefactor">CodeFactor</a> which allows to check that our code is compliant and usable.<br>
+I set up two apps on the repo via <a href="https://github.com/marketplace"> Github marketplace </a>. The first one is <a href="https://github.com/marketplace/imgbot">imgbot</a> which allows to optimize images for your site and the second one is <a href="https://github.com/marketplace/codefactor">CodeFactor</a> which allows to check that our code is compliant and usable.<br>
 
 For the deployment, I used <a href="https://www.o2switch.fr/">o2switch</a>.<br>
 
