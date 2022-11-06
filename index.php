@@ -293,7 +293,7 @@
             <div class="group-footer">
                 <img src="./img/contact/mail.png" alt="logo de mail">
                 <p>Email :</p>
-                <p id="mail">contact@tom-tamen.fr</p>
+                <a id="mail" href="mailto:contact@tom-tamen.fr">contact@tom-tamen.fr</a>
             </div>
             <div class="group-footer">
                 <img src="./img/contact/linekdin.png" alt="logo de linekdin">

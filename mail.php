@@ -35,8 +35,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){//detect if the form is sent
                     }else{
                         $phone=htmlspecialchars($_POST["phone"]);//memorizes the phone
                     }
-                    $full = "Émetteur : ".$identity."\nEmail : ".$email."\nTéléphone : ".$phone."\nMessage : \n".$msg;//formatted the content of the email
-                    $send = mail('contact@tom-tamen.fr',$obj,$full);//send the mail
+                    $full = "Émetteur : ".$identity.'<br>'."Email : ".$email.'<br>'."Téléphone : ".$phone.'<br>'."Message : ".'<br>'.$msg;//formatted the content of the email
+                    $headers=['From'=> 'no-reply@tom-tamen.fr',"Content-Type"=>"text/html; charset=utf-8"];
+                    $send = mail('contact@tom-tamen.fr',$obj,$full,$headers);//send the mail
                     if($send){
                         redirect($lang, true); //redirect to the success message
                     }else{

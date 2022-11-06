@@ -88,9 +88,12 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 home.appendChild(renderer.domElement);
 renderer.render(scene, camera);
 
-window.addEventListener('resize', ()=>{
+//fix on resize
+window.addEventListener('resize', () =>{
+    camera.aspect =  home.clientWidth / home.clientHeight;
+    camera.updateProjectionMatrix();
     renderer.setSize(home.clientWidth, home.clientHeight);
-});
+})
 
 //function to recreate groups
 function createGroup(n, toClone){
@@ -127,7 +130,9 @@ createGroup(4, group); //create more groups
 let canMove = Boolean;
 const firstsec=document.getElementById('first');
 const clientHeight = document.documentElement.clientHeight;
-
+if(window.innerWidth<800){
+    canMove = false;
+}
 window.addEventListener('scroll', () => {
     let firstsecY = firstsec.getBoundingClientRect().y;
     let firstsecH = firstsec.getBoundingClientRect().height;
@@ -136,7 +141,11 @@ window.addEventListener('scroll', () => {
     }else{
         canMove = false;
     }
+    if(window.innerWidth<800){
+        canMove = false;
+    }
 });
+
 
 //--------------------------------------------------------------------------------------------------------
 
@@ -177,10 +186,3 @@ function tick(){ //animation function
 }
 
 tick();
-
-//fix on resize
-window.addEventListener('resize', () =>{
-    camera.aspect =  window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-})
