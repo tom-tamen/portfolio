@@ -1,7 +1,7 @@
 ## Portfolio
 
 View my portfolio : <a href='https://tom-tamen.fr'>tom-tamen.fr</a>
-Last update : 05/11/2022<br>
+Last update : 06/11/2022<br>
 This project is the creation of my portfolio. To create this portfolio, I used the following technologies: 
 <ul>
 	<li><a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> </li>
