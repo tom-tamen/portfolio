@@ -1,66 +1,90 @@
 //This is the third section 
 @use '../mixins';
 @use '../variables';
-#third{
-    gap: 70px;
-    .comp-grid{//grid that contains the skills
-        display: grid;
-        width: 80%;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(2, 30vh);
-        grid-gap: 2em;
-        grid-row-gap: 5vh;
-        .comp-card{ //skills cards for each skill
-            background-color: variables.$backcolor;
+
+#third {
+    .skills{
+        padding: 10vh 5vw 0 5vw;
+        @include mixins.flexdef(16%);
+        flex-direction: row;
+        align-items: flex-start;
+        @include mixins.breakpoint(900px) {
+            flex-direction: column;
+            gap : 5vh;
+        }
+        .skill-type{
             @include mixins.flexdef(20px);
-            border: solid 1px white;
-            border-radius: 20px;
-            img{ //skill visual
-                width: 100px;
-                height: auto;
-                @include mixins.breakpoint(800px){
-                    width: 70px;
+            justify-content: start;
+            width: 28%;
+            @include mixins.breakpoint(900px) {
+                width: 90%;
+            }
+            .skill-title{
+                font-size: 32px;
+                @include mixins.breakpoint(900px) {
+                    font-size: 25px;
                 }
-                @include mixins.breakpoint(600px){
-                    width: 50px;
+                @include mixins.breakpoint(600px) {
+                    font-size: 15px;
                 }
             }
-            @include mixins.breakpoint(600px){
-                border: none;
-                background-color: rgba(0, 0, 0, 0);
+            .all-skills{
+                @include mixins.flexdef(50px);
+                flex-wrap: wrap;
+                flex-direction: row;
+                @include mixins.breakpoint(600px) {
+                    gap: 20px;
+                }
             }
         }
-        .comp-card:hover{ //skills cards animation on hover
+        .comp-card {
+            //skills cards for each skill
+            background-color: variables.$backcolor;
+            @include mixins.flexdef(20px);
+
+            img {
+                //skill visual
+                width: 50px;
+                height: auto;
+
+                @include mixins.breakpoint(900px) {
+                    width: 30px;
+                }
+
+                @include mixins.breakpoint(600px) {
+                    width: 20px;
+                }
+            }
+
+            p{
+                @include mixins.breakpoint(900px) {
+                    font-size: 15px;
+                }
+                @include mixins.breakpoint(600px) {
+                    font-size: 10px;
+                }
+            }
+
+            @include mixins.breakpoint(600px) {
+                border: none;
+                background-color: rgba(0, 0, 0, 0);
+                gap: 10px;
+            }
+        }
+
+        .comp-card:hover {
+            //skills cards animation on hover
             transition: 0.5s;
-            img{//skill visual scale up
+
+            img {
+                //skill visual scale up
                 transition: 0.3s ease-in-out;
                 transform: scale(1.2);
             }
-            box-shadow: 0 0 10px variables.$blue,//shiny card effect.
-            0 0 20px variables.$blue,
-            0 0 40px variables.$blue,
-            0 0 80px variables.$blue,
-            0 0 120px variables.$blue;
-            @include mixins.breakpoint(600px){
+
+            @include mixins.breakpoint(600px) {
                 box-shadow: none;
             }
-        }
-        @include mixins.breakpoint(950px){
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(4, 20vh);
-            grid-row-gap: 10px;
-        }
-        @include mixins.breakpoint(600px){
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(5, 16vh);
-            grid-gap: 0px;
-        }
-    }
-    @include mixins.breakpoint(600px){
-        gap: 5px;
-        p{
-            font-size: 15px;
-            text-align: center;
         }
     }
 }

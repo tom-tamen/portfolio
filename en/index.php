@@ -67,46 +67,93 @@
     </section>
     <section class="portfolio-section" id="third">
         <h3>Skills</h3>
-        <div class='comp-grid'>
-            <div class="comp-card" id="comp-card-1">
-                <img src="../img/skills/adobe.png" alt="logo adobe">
-                <p>Suite adobe</p>
+        <div class="skills">
+            <div class="skill-type">
+                <p class="skill-title">Backend</p>
+                <div class="all-skills">
+                    <div class="comp-card">
+                        <img src="../img/skills/php.png" alt="logo php">
+                        <p>PHP</p>
+                    </div>
+                    <div class="comp-card">
+                        <img src="../img/skills/mysql.png" alt="logo mysql">
+                        <p>MySql</p>
+                    </div>
+                    <div class="comp-card">
+                        <img src="../img/skills/python.png" alt="logo python">
+                        <p>Python</p>
+                    </div>
+                    <div class="comp-card">
+                        <img src="../img/skills/mongodb.png" alt="logo mongodb">
+                        <p>MongoDB</p>
+                    </div>
+                    <div class="comp-card">
+                        <img src="../img/skills/nodejs.png" alt="logo nodejs">
+                        <p>NodeJS</p>
+                    </div>
+                    <div class="comp-card">
+                        <img src="../img/skills/synfony.svg" alt="logo synfony">
+                        <p>Synfony</p>
+                    </div>
+                    <div class="comp-card">
+                        <img src="../img/skills/laravel.png" alt="logo laravel">
+                        <p>Laravel</p>
+                    </div>
+                </div>
             </div>
-            <div class="comp-card" id="comp-card-2">
-                <img src="../img/skills/css.png" alt="logo css">
-                <p>CSS 3</p>
+            <div class="skill-type">
+                <p class="skill-title">Frontend</p>
+                <div class="all-skills">
+                    <div class="comp-card">
+                        <img src="../img/skills/html.png" alt="logo html">
+                        <p>HTML 5</p>
+                    </div>
+                    <div class="comp-card">
+                        <img src="../img/skills/css.png" alt="logo css">
+                        <p>CSS 3</p>
+                    </div>
+                    <div class="comp-card">
+                        <img src="../img/skills/js.png" alt="logo js">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="comp-card">
+                        <img src="../img/skills/sass.png" alt="logo sass">
+                        <p>Sass / Scss</p>
+                    </div>
+                    <div class="comp-card">
+                        <img src="../img/skills/vuejs.png" alt="logo vuejs">
+                        <p>VueJS</p>
+                    </div>
+                    <div class="comp-card">
+                        <img src="../img/skills/tailwind.png" alt="logo tailwind">
+                        <p>Tailwind</p>
+                    </div>
+                </div>
             </div>
-            <div class="comp-card" id="comp-card-3">
-                <img src="../img/skills/html.png" alt="logo html">
-                <p>HTML 5</p>
-            </div>
-            <div class="comp-card" id="comp-card-4">
-                <img src="../img/skills/js.png" alt="logo js">
-                <p>Java Script</p>
-            </div>
-            <div class="comp-card" id="comp-card-5">
-                <img src="../img/skills/git.png" alt="logo git">
-                <p>Git</p>
-            </div>
-            <div class="comp-card" id="comp-card-6">
-                <img src="../img/skills/php.png" alt="logo php">
-                <p>PHP</p>
-            </div>
-            <div class="comp-card" id="comp-card-7">
-                <img src="../img/skills/mysql.png" alt="logo mysql">
-                <p>MySql</p>
-            </div>
-            <div class="comp-card" id="comp-card-8">
-                <img src="../img/skills/sass.png" alt="logo sass">
-                <p>Sass / Scss</p>
-            </div>
-            <div class="comp-card" id="comp-card-9">
-                <img src="../img/skills/wordpress.png" alt="logo wordpress">
-                <p>Wordpress</p>
-            </div>
-            <div class="comp-card" id="comp-card-10">
-                <img src="../img/skills/figma.png" alt="logo figma">
-                <p>Figma</p>
+            <div class="skill-type">
+                <p class="skill-title">Tools</p>
+                <div class="all-skills">
+                    <div class="comp-card">
+                        <img src="../img/skills/git.png" alt="logo git">
+                        <p>Git</p>
+                    </div>
+                    <div class="comp-card">
+                        <img src="../img/skills/wordpress.png" alt="logo wordpress">
+                        <p>Wordpress</p>
+                    </div>
+                    <div class="comp-card">
+                        <img src="../img/skills/photoshop.png" alt="logo photoshop">
+                        <p>Figma</p>
+                    </div>
+                    <div class="comp-card">
+                        <img src="../img/skills/figma.png" alt="logo figma">
+                        <p>Figma</p>
+                    </div>
+                    <div class="comp-card">
+                        <img src="../img/skills/xd.png" alt="logo adobeXD">
+                        <p>AdobeXD</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -114,21 +161,292 @@
         <h3>Projects</h3>
         <div class="grid-projects">
             <div class="card-project pj1">
-                <img src="../img/projets/pw/pw-1.png" alt="Image from the project website">
-                <p>Portal World</p>
+                <img src="../img/projets/larazic/accueil.JPG" alt="Image from the project website">
+                <p>LaraZic</p>
             </div>
             <div class="card-project pj2">
-                <img src="../img/projets/hoozpend/gestion.png" alt="Image from the project website">
-                <p>Hoozpend</p>
+                <img src="../img/projets/phone/clavier.JPG" alt="Image from the project website">
+                <p>Phone</p>
             </div>
             <div class="card-project pj3">
+                <img src="../img/projets/pokemon/pokemon.JPG" alt="Image from the project website">
+                <p>PokéBicrave</p>
+            </div>
+
+            <div class="card-project pj4">
+                <img src="../img/projets/tailwind-integration/inte.JPG" alt="Image from the project website">
+                <p>Tailwind integration</p>
+            </div>
+
+            <div class="card-project pj5">
+                <img src="../img/projets/poo-spa/Spa.JPG" alt="Image from the project website">
+                <p>SPA</p>
+            </div>
+
+            <div class="card-project pj6">
+                <img src="../img/projets/nim/nim.JPG" alt="Image from the project website">
+                <p>Nim's game</p>
+            </div>
+
+            <div class="card-project pj7">
+                <img src="../img/projets/art-forains/muse.JPG" alt="Image from the project website">
+                <p>Museum of Fairground Arts</p>
+            </div>
+
+            <div class="card-project pj8">
                 <img src="../img/projets/pres/pres.png" alt="Image from the project website">
                 <p>Presentation</p>
             </div>
-        </div>
+
+            <div class="card-project pj9">
+                <img src="../img/projets/hoozpend/gestion.png" alt="Image from the project website">
+                <p>Hoozpend</p>
+            </div>
+
+            <div class="card-project pj10">
+                <img src="../img/projets/pw/pw-1.png" alt="Image from the project website">
+                <p>Portal World</p>
+            </div>
+        </div>    
         <div class="exit">
             <span class="bar"></span>
             <span class="bar"></span>
+        </div>
+        <div class="detail">
+            <div class="card-detail">
+                <div class="part title-project">
+                    <h4>Larazic</h4>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/larazic/accueil.JPG" alt="Image from the project website">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/larazic/larazic-2.JPG" alt="Image from the project website">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/larazic/larazic-3.JPG" alt="Image from the project website">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/larazic/larazic-4.JPG" alt="Image from the project website">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="part description-project">
+                    <p>Larazic is a collaborative project with <a href="https://github.com/Charles-Chrismann">Charles Chrismann</a>. The website was designed with the following technologies: Laravel / VueJS / InertiaJS / Axios / MySQL / Tailwind / TMDB API. The objective of the site is to have access to all the movies made available by TMDB and to interact with them through user accounts. (Create Albums, Add a movie in an album, Lik the album of another user ...)</p>
+                    <p>To see the project website : <a href="https://larazic.tom-tamen.fr">Larazic</a></p>
+                    <p>To see the repo on github : <a href="https://github.com/tom-tamen/Devlab-Back-Wiki-Movies">Github</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="card-detail">
+                <div class="part title-project">
+                    <h4>Phone</h4>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/phone/clavier.JPG" alt="Image from the project website">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/phone/phone-2.JPG" alt="Image from the project website">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/phone/phone-3.JPG" alt="Image from the project website">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="part description-project">
+                    <p>Phone is a project to replicate the calling application of a smartphone. The site was designed with VueJS.</p>
+                    <p>To see the project website : <a href="https://phone.tom-tamen.fr">Phone</a></p>
+                    <p>To see the repo on github : <a href="https://github.com/tom-tamen/VueJS-Phone">Github</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="card-detail">
+                <div class="part title-project">
+                    <h4>PokéBircave</h4>
+                </div>
+                <div class="part single-img-project">
+                    <input type="checkbox" id="Zoom2" class="zoom">
+                    <label for="Zoom2">
+                        <img src="../img/projets/pokemon/pokemon.JPG" alt="Image from the project website">
+                    </label>
+                </div>
+                <div class="part description-project">
+                    <p>We were four collaborated on this frontend project. Our goal was to create a game where the goal is to capture pokemons and sell them to progress. This project was an opportunity to work with the PokeAPI api and to deepen some JavaScript notions like promises and asynchronous.</p>
+                    <p>To see the project website : <a href="https://js-a2-one4-all-pokemon.vercel.app/">PokéBicrave</a><br> To see the repo on github : <a href="https://github.com/tom-tamen/JS-A2-One4All-pokemon">Github</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="card-detail">
+                <div class="part title-project">
+                    <h4>Tailwind integration</h4>
+                </div>
+                <div class="part single-img-project">
+                    <input type="checkbox" id="Zoom3" class="zoom">
+                    <label for="Zoom3">
+                        <img src="../img/projets/tailwind-integration/inte.JPG" alt="Image from the project website">
+                    </label>
+                </div>
+                <div class="part description-project">
+                    <p>This project was done in collaboration with <a href="https://github.com/Charles-Chrismann">Charles Chrismann</a>. We made a mockup integration with Tailwind / VueJS / Vite</p>
+                    <p>To see the project website : <a href="https://tailwind-integration.tom-tamen.fr/">Tailwind integration</a><br> To see the repo on github : <a href="https://github.com/tom-tamen/framework-front-end-a2dw2-chrismann_tamen">Github</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="card-detail">
+                <div class="part title-project">
+                    <h4>SPA</h4>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/poo-spa/Spa.JPG" alt="Image from the project website">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/poo-spa/spa-2.JPG" alt="Image from the project website">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/poo-spa/spa-3.JPG" alt="Image from the project website">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="part description-project">
+                    <p>This project is done with PHP. The objective was to discover and implement object-oriented programming in PHP.</p>
+                    <p>To see the project website : <a href="https://poo-spa.tom-tamen.fr/">SPA</a></p>
+                    <p>To see the repo on github : <a href="https://github.com/tom-tamen/PHP-poo-tom-tamen">Github</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="card-detail">
+                <div class="part title-project">
+                    <h4>Nim's game</h4>
+                </div>
+                <div class="part single-img-project">
+                    <input type="checkbox" id="Zoom4" class="zoom">
+                    <label for="Zoom4">
+                        <img src="../img/projets/nim/nim.JPG" alt="Image from the project website">
+                    </label>
+                </div>
+                <div class="part description-project">
+                    <p>I made a Nim game with JavaScript. The goal was to review some algorithmic notions and to manipulate the dom.</p>
+                    <p>To see the project website : <a href="https://nim.tom-tamen.fr/">Nim's game</a><br> To see the repo on github : <a href="https://github.com/tom-tamen/rendu-algo">Github</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="card-detail">
+                <div class="part title-project">
+                    <h4>Museum of Fairground Arts</h4>
+                </div>
+                <div class="part single-img-project">
+                    <input type="checkbox" id="Zoom5" class="zoom">
+                    <label for="Zoom5">
+                        <img src="../img/projets/art-forains/muse.JPG" alt="Image from the project website">
+                    </label>
+                </div>
+                <div class="part description-project">
+                    <p>The purpose of this project is to discover and use the SASS preprocessor with the SCSS syntax. For this exercise, I make a site on the Museum of Fairground Arts.</p>
+                    <p>To see the project website : <a href="https://tom-tamen.github.io/RenduSCSS/">Museum of Fairground Arts</a><br> To see the repo on github : <a href="https://github.com/tom-tamen/RenduSCSS">Github</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="card-detail">
+                <div class="part title-project">
+                    <h4>Presentation</h4>
+                </div>
+                <div class="part single-img-project">
+                    <input type="checkbox" id="Zoom1" class="zoom">
+                    <label for="Zoom1">
+                        <img src="../img/projets/pres/pres.png" alt="Image from the project website">
+                    </label>
+                </div>
+                <div class="part description-project">
+                    <p>For this project, I made a single page. The goal was to make us practice the Git/GitHub work environment with several people. We had to make a presentation page of a member of our group other than ourselves. Each page contains the presentation of the person, his passion and one of his projects.</p>
+                    <p>To see the project website : <a href="https://tom-tamen.github.io/site_groupe/tom/lucie.html">It is here</a><br> To see the repo on github : <a href="https://github.com/ByKrewz/site_groupe">This way</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="card-detail">
+                <div class="part title-project">
+                    <h4>Hoozpend</h4>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/hoozpend/hoozpend.png" alt="Image from the project website">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/hoozpend/gestion.png" alt="Image from the project website">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/hoozpend/delete.png" alt="Image from the project website">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/hoozpend/stats1.png" alt="Image from the project website">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/hoozpend/stats2.png" alt="Image from the project website">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="part description-project">
+                    <p>The purpose of this personal project was to make me practice php and to answer a problem. The problem was the need for a tool to analyze the daily expenses. The project was designed from scratch without any framework in php/MySQL/JavaScript. Library used : Chart.js</p>
+                </div>
+            </div>
         </div>
         <div class="detail">
             <div class="card-detail">
@@ -181,66 +499,6 @@
                 <div class="part description-project">
                     <p>Portal World is my end of first year study project. The site was designed from scratch without library/framework with php / javascript / html / css / MySQL. The site is meant to be functional (except the purchase part which is fictitious). The objective of the site was to highlight the skills acquired during the first year of study.</p>
                     <p>To see the project website : <a href="#">Soon</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="detail">
-            <div class="card-detail">
-                <div class="part title-project">
-                    <h4>Hoozpend</h4>
-                </div>
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                                <img src="../img/projets/hoozpend/hoozpend.png" alt="Image du site web du projet">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                                <img src="../img/projets/hoozpend/gestion.png" alt="Image du site web du projet">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                                <img src="../img/projets/hoozpend/delete.png" alt="Image du site web du projet">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                                <img src="../img/projets/hoozpend/stats1.png" alt="Image du site web du projet">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                                <img src="../img/projets/hoozpend/stats2.png" alt="Image du site web du projet">
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-                <div class="part description-project">
-                    <p>The purpose of this personal project was to make me practice php and to answer a problem. The problem was the need for a tool to analyze the daily expenses. The project was designed from scratch without any framework in php/MySQL/JavaScript. Library used : Chart.js</p>
-                </div>
-            </div>
-        </div>
-        <div class="detail">
-            <div class="card-detail">
-                <div class="part title-project">
-                    <h4>Presentation</h4>
-                </div>
-                <div class="part single-img-project">
-                    <input type="checkbox" id="Zoom" class="zoom">
-                    <label for="Zoom">
-                        <img src="../img/projets/pres/pres.png" alt="Image from the project website">
-                    </label>
-                </div>
-                <div class="part description-project">
-                    <p>For this project, I made a single page. The goal was to make us practice the Git/GitHub work environment with several people. We had to make a presentation page of a member of our group other than ourselves. Each page contains the presentation of the person, his passion and one of his projects.</p>
-                    <p>To see the project website : <a href="https://tom-tamen.github.io/site_groupe/tom/lucie.html">It is here</a><br> To see the repo on github : <a href="https://github.com/ByKrewz/site_groupe">This way</a></p>
                 </div>
             </div>
         </div>
