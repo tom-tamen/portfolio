@@ -143,7 +143,7 @@
                     </div>
                     <div class="comp-card">
                         <img src="../img/skills/photoshop.png" alt="logo photoshop">
-                        <p>Figma</p>
+                        <p>Photoshop</p>
                     </div>
                     <div class="comp-card">
                         <img src="../img/skills/figma.png" alt="logo figma">
@@ -161,49 +161,53 @@
         <h3>Projects</h3>
         <div class="grid-projects">
             <div class="card-project pj1">
+                <img src="../img/projets/neon/1.png" alt="Image from the project website">
+                <p>E-Neon Shop</p>
+            </div>
+            <div class="card-project pj2">
                 <img src="../img/projets/larazic/accueil.JPG" alt="Image from the project website">
                 <p>LaraZic</p>
             </div>
-            <div class="card-project pj2">
+            <div class="card-project pj3">
                 <img src="../img/projets/phone/clavier.JPG" alt="Image from the project website">
                 <p>Phone</p>
             </div>
-            <div class="card-project pj3">
+            <div class="card-project pj4">
                 <img src="../img/projets/pokemon/pokemon.JPG" alt="Image from the project website">
                 <p>PokéBicrave</p>
             </div>
 
-            <div class="card-project pj4">
+            <div class="card-project pj5">
                 <img src="../img/projets/tailwind-integration/inte.JPG" alt="Image from the project website">
                 <p>Tailwind integration</p>
             </div>
 
-            <div class="card-project pj5">
+            <div class="card-project pj6">
                 <img src="../img/projets/poo-spa/Spa.JPG" alt="Image from the project website">
                 <p>SPA</p>
             </div>
 
-            <div class="card-project pj6">
+            <div class="card-project pj7">
                 <img src="../img/projets/nim/nim.JPG" alt="Image from the project website">
                 <p>Nim's game</p>
             </div>
 
-            <div class="card-project pj7">
+            <div class="card-project pj8">
                 <img src="../img/projets/art-forains/muse.JPG" alt="Image from the project website">
                 <p>Museum of Fairground Arts</p>
             </div>
 
-            <div class="card-project pj8">
+            <div class="card-project pj9">
                 <img src="../img/projets/pres/pres.png" alt="Image from the project website">
                 <p>Presentation</p>
             </div>
 
-            <div class="card-project pj9">
+            <div class="card-project pj10">
                 <img src="../img/projets/hoozpend/gestion.png" alt="Image from the project website">
                 <p>Hoozpend</p>
             </div>
 
-            <div class="card-project pj10">
+            <div class="card-project pj11">
                 <img src="../img/projets/pw/pw-1.png" alt="Image from the project website">
                 <p>Portal World</p>
             </div>
@@ -211,6 +215,56 @@
         <div class="exit">
             <span class="bar"></span>
             <span class="bar"></span>
+        </div>
+        <div class="detail">
+            <div class="card-detail">
+                <div class="part title-project">
+                    <h4>E-Neon Shop</h4>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/neon/1.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/neon/2.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/neon/3.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/neon/4.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/neon/5.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="../img/projets/neon/6.png" alt="Image du site web du projet">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="part description-project">
+                    <p>E-Neon Shop is a Smfony and Bootstrap project. This project aims to reproduce an e-commerce website with an administration space. (easy admin)</p>
+                    <p>To see the project website : <a href="https://neon.tom-tamen.fr">E-Neon Shop</a></p>
+                    <p>To see the repo on github : <a href="https://github.com/tom-tamen/E-Neon-shop">Github</a></p>
+                </div>
+            </div>
         </div>
         <div class="detail">
             <div class="card-detail">

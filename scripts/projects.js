@@ -12,6 +12,7 @@ projects.forEach(projet=>{//opens the details of a project if it is clicked
     })
 })
 
+
 exit.addEventListener('click',()=>{//exit the details if the exit button is pressed
     details.forEach(detail =>{
         detail.style.display ='none';

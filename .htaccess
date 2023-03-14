@@ -1,0 +1,15 @@
+
+RewriteOptions inherit
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^dltw7545\.odns\.fr$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.dltw7545\.odns\.fr$
+RewriteRule ^(.*)$ "https\:\/\/tom\-tamen\.fr\/$1" [R=301,L]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^tom\-tamen\.fr$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.tom\-tamen\.fr$
+RewriteRule ^(.*)$ "https\:\/\/tom\-tamen\.fr\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^tom\-tamen\.fr\.dltw7545\.odns\.fr$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.tom\-tamen\.fr\.dltw7545\.odns\.fr$
+RewriteRule ^(.*)$ "https\:\/\/tom\-tamen\.fr\/$1" [R=301,L]
